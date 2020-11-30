@@ -1,0 +1,58 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #47596c;
+  color: #fff;
+  height: 100vh;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.stopwatch {
+  font-size: 8rem;
+  margin-bottom: 3rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  transform: translateY(-0.2rem);
+  transition: all 0.5s;
+}
+
+.start,
+.pause {
+  margin-right: 2rem;
+}
+
+@media (max-width: 600px) {
+  .stopwatch {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+  }
+
+  button:hover {
+    transform: translateY(-0.1rem);
+  }
+
+  .start,
+  .pause {
+    margin-right: 1rem;
+  }
+}
