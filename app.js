@@ -7,9 +7,10 @@ const resetBtn = document.querySelector('.reset');
 
 let seconds, minutes, hours;
 let timer;
+let inactive;
 
 const init = () => {
-  (seconds = 0), (minutes = 0), (hours = 0);
+  (seconds = 0), (minutes = 0), (hours = 0), (inactive = true);
   secsEl.textContent = `0${seconds}`;
   minsEl.textContent = `0${minutes}`;
   hrsEl.textContent = `0${hours}`;
@@ -59,7 +60,12 @@ const stopInterval = () => {
   clearTimeout(timer);
 };
 
-startBtn.addEventListener('click', startInterval);
+startBtn.addEventListener('click', () => {
+  if (inactive) {
+    inactive = false;
+    startInterval();
+  }
+});
 
 pauseBtn.addEventListener('click', () => {
   stopInterval(timer);
