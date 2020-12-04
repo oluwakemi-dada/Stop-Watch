@@ -3,19 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Stop-Watch</title>
   </head>
   <body>
     <div class="main-div">
       <div class="stopwatch">
-        <span class="hrs">00</span> : <span class="mins">00</span> :
-        <span class="secs">00</span>
+        <div class="time">
+          <span class="hrs">00</span>:<span class="mins">00</span>:<span
+            class="secs"
+            >00</span
+          >
+        </div>
+        <div class="ring"></div>
       </div>
-      <div>
-        <button class="start">Start</button>
-        <button class="pause">Pause</button>
-        <button class="reset">Reset</button>
+      <div class="all-btn">
+        <div class="start btn">
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </div>
+        <div class="pause btn">
+          <i class="fa fa-pause" aria-hidden="true"></i>
+        </div>
+        <div class="reset btn">
+          <i class="fa fa-stop" aria-hidden="true"></i>
+        </div>
       </div>
     </div>
     <script src="app.js"></script>

@@ -4,6 +4,7 @@ const secsEl = document.querySelector('.secs');
 const startBtn = document.querySelector('.start');
 const pauseBtn = document.querySelector('.pause');
 const resetBtn = document.querySelector('.reset');
+const ring = document.querySelector('.ring');
 
 let seconds, minutes, hours;
 let timer;
@@ -60,19 +61,23 @@ const stopInterval = () => {
   clearTimeout(timer);
 };
 
+// EVENT LISTENERS
 startBtn.addEventListener('click', () => {
   if (active === false) {
     active = true;
+    ring.classList.add('animated');
     startInterval();
   }
 });
 
 pauseBtn.addEventListener('click', () => {
+  ring.classList.remove('animated');
   stopInterval(timer);
   active = false;
 });
 
 resetBtn.addEventListener('click', () => {
+  ring.classList.remove('animated');
   clearTimeout(timer);
   init();
 });

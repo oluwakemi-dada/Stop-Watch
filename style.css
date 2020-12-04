@@ -5,31 +5,79 @@ body {
   background: #47596c;
   color: #fff;
   height: 100vh;
-}
-
-.main-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  background-image: linear-gradient(to top left, #9f6bbd, #c798e3);
+}
+
+.main-div {
+  width: 60%;
+  height: 85%;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to top left, #292364, rgb(80, 15, 94));
 }
 
 .stopwatch {
-  font-size: 8rem;
+  font-size: 3rem;
   margin-bottom: 3rem;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 100%;
+  box-shadow: 0 0 5px rgb(255, 255, 255, 0.4);
+  background: transparent;
+  position: relative;
 }
 
-button {
-  padding: 1rem 2rem;
-  border-radius: 2px;
-  border: none;
+.time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ring {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 100%;
+  box-shadow: 0 4px 0 #fff;
+}
+
+.ring.animated {
+  animation: animate 1s linear infinite;
+}
+
+.all-btn {
+  display: flex;
+}
+
+.btn {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  border: 1px solid #c798e3;
   outline: none;
+  position: relative;
+  background: transparent;
 }
 
-button:hover {
+.btn:hover {
+  background: #daa3df;
   transform: translateY(-0.2rem);
   transition: all 0.5s;
+  transform: translateX(-50);
+}
+
+.btn > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .start,
@@ -37,22 +85,42 @@ button:hover {
   margin-right: 2rem;
 }
 
-@media (max-width: 600px) {
-  .stopwatch {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
   }
 
-  button {
-    padding: 0.5rem 1rem;
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-div {
+    width: 70%;
+    height: 80%;
   }
 
-  button:hover {
+  .btn:hover {
     transform: translateY(-0.1rem);
   }
 
   .start,
   .pause {
     margin-right: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-div {
+    width: 90%;
+    height: 85%;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-div {
+    width: 90%;
+    height: 90%;
   }
 }
