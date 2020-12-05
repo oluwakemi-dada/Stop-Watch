@@ -21,6 +21,7 @@ body {
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(to top left, #292364, rgb(80, 15, 94));
+  box-shadow: 0 0 2px #333;
 }
 
 .stopwatch {
@@ -122,5 +123,85 @@ body {
   .main-div {
     width: 90%;
     height: 90%;
+  }
+}
+
+@media (max-width: 280px) {
+  .main-div {
+    width: 85%;
+    height: 90%;
+  }
+
+  .stopwatch {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .ring {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .btn {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .icon {
+    font-size: 0.8rem;
+  }
+}
+
+/* LANDSCAPE */
+@media (max-height: 414px) {
+  .main-div {
+    width: 85%;
+    height: 90%;
+  }
+
+  .stopwatch {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .ring {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .btn {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .icon {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-height: 280px) {
+  .stopwatch {
+    font-size: 1.8rem;
+    margin-bottom: 1.9rem;
+    height: 9rem;
+    width: 9rem;
+  }
+
+  .ring {
+    height: 9rem;
+    width: 9rem;
+  }
+
+  .btn {
+    height: 1.9rem;
+    width: 1.9rem;
+  }
+
+  .icon {
+    font-size: 0.7rem;
   }
 }
