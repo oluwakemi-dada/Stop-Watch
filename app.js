@@ -54,7 +54,6 @@ const stopwatch = () => {
 
 const startInterval = () => {
   timer = setInterval(stopwatch, 1000);
-  startPause();
 };
 
 const stopInterval = () => {
@@ -72,13 +71,13 @@ startBtn.addEventListener('click', () => {
 
 pauseBtn.addEventListener('click', () => {
   ring.classList.remove('animated');
-  stopInterval(timer);
+  stopInterval();
   active = false;
 });
 
 resetBtn.addEventListener('click', () => {
   ring.classList.remove('animated');
-  clearTimeout(timer);
+  stopInterval();
   init();
 });
 
